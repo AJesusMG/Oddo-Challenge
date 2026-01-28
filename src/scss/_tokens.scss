@@ -1,8 +1,7 @@
 $custom-colors: (
-  "brand": #4f46e5
+  "brand": #038AFF
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
-$border-radius: 1rem;
-$border-radius-lg: 1.25rem;
+$navbar-padding-y: 0.85rem;
