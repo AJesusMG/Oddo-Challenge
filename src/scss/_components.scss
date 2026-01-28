@@ -1,0 +1,34 @@
+@media (min-width: 992px) {
+  .navbar .nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.navbar .navbar-nav{
+  gap: 1rem;
+}
+
+.navbar .navbar-nav .nav-link {
+  padding-inline: .75rem;
+}
+
+.brand-logo {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+.btn-icon {
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+
+.navbar.bg-brand {
+  --bs-navbar-color: #fff;
+  --bs-navbar-hover-color: #fff;
+  --bs-navbar-active-color: #fff;
+  --bs-navbar-toggler-border-color: rgba(255, 255, 255, .35);
+}
