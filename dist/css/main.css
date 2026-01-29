@@ -11987,4 +11987,39 @@ textarea.form-control-lg {
   --bs-navbar-toggler-border-color: rgba(255, 255, 255, .35);
 }
 
+.icon-logo-white {
+  height: 25px;
+  width: auto;
+  display: block;
+}
+
+.btn-app {
+  padding: 0.9rem 1.55rem;
+  border-radius: 0.8rem;
+  font-size: 0.785rem;
+  font-weight: 600;
+  line-height: 1.1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-link-dotted {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  font-size: 0.875rem;
+}
+
+.hero-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  border-radius: 1rem 1rem 6rem 1rem;
+  padding: 1.25rem;
+  max-width: 460px;
+}
+
 /*# sourceMappingURL=main.css.map */

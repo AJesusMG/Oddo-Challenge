@@ -5,3 +5,11 @@ $custom-colors: (
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 $navbar-padding-y: 0.85rem;
+
+$btn-app-py: .90rem;
+$btn-app-px: 1.55rem;
+$btn-app-font-size: .785rem;
+$btn-app-radius: .8rem;
+$btn-app-font-weight: 600;
+$btn-app-gap: .5rem;
+$btn-app-transition: .12s ease;

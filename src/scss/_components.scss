@@ -32,3 +32,39 @@
   --bs-navbar-active-color: #fff;
   --bs-navbar-toggler-border-color: rgba(255, 255, 255, .35);
 }
+
+.icon-logo-white {
+  height: 25px;
+  width: auto;
+  display: block;
+}
+
+.btn-app {
+  padding: $btn-app-py $btn-app-px;
+  border-radius: $btn-app-radius;
+  font-size: $btn-app-font-size;
+  font-weight: $btn-app-font-weight;
+  line-height: 1.1;
+
+  display: inline-flex;
+  align-items: center;
+  gap: $btn-app-gap;
+}
+
+.btn-link-dotted {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: currentColor;
+  text-underline-offset: .2em;
+  text-decoration-thickness: 1px;
+  font-size: .875rem;
+}
+
+.hero-panel{
+  display: flex;
+  flex-direction: column;
+  gap: .875rem;
+  border-radius: 1rem 1rem 6rem 1rem;
+  padding: 1.25rem;
+  max-width: 460px;
+}
