@@ -9,10 +9,11 @@
     "sync": "copyfiles -u 2 \"src/js/main.js\" dist/js"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "gsap": "^3.14.2"
   },
   "devDependencies": {
-    "sass": "^1.77.0",
-    "copyfiles": "^2.4.1"
+    "copyfiles": "^2.4.1",
+    "sass": "^1.77.0"
   }
 }

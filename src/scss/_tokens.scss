@@ -1,5 +1,18 @@
+$brand-blue: #038AFF;
+$brand-yellow: #ffc107;
+$brand-green: #10b981;
+$brand-red: #ff0000;
+$brand-dark-blue: #161348;
+$brand-gray: #FAFBFF;
+
 $custom-colors: (
-  "brand": #038AFF
+  "brand": $brand-blue,
+  "brand-blue": $brand-blue,
+  "brand-yellow": $brand-yellow,
+  "brand-green": $brand-green,
+  "brand-red": $brand-red,
+  "brand-dark-blue": $brand-dark-blue,
+  "brand-gray": $brand-gray,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
@@ -12,4 +25,69 @@ $btn-app-font-size: .785rem;
 $btn-app-radius: .8rem;
 $btn-app-font-weight: 600;
 $btn-app-gap: .5rem;
-$btn-app-transition: .12s ease;
+
+$btn-play-py: .65rem;
+$btn-play-px: 1.45rem;
+$btn-play-font-size: .785rem;
+$btn-play-radius: .7rem;
+$btn-play-font-weight: 600;
+$btn-play-gap: .5rem;
+$btn-play-bg: #fff;
+
+$badge-padding-y: .40rem;
+$badge-padding-x: .6rem;
+$badge-font-size: .665rem;
+$badge-border-radius: .25rem;
+$badge-font-weight: 600;
+$badge-gap: .5rem;
+
+$fs-p-sm: .665rem;
+$fs-p-md: .875rem;
+
+$brand-logo-h: 30px;
+$icon-logo-white-h: 25px;
+
+$hero-panel-max-w: 460px;
+$hero-panel-p: 1.25rem;
+$hero-panel-gap: .875rem;
+$hero-panel-radius: 1rem;
+$hero-panel-radius-br: 6rem;
+
+$product-panel-p: 1.25rem;
+$product-panel-gap: .875rem;
+$product-panel-radius: .1rem;
+$product-panel-radius-br: 3rem;
+
+$progress-h: .2rem;
+
+$feature-card-w: 420px;
+$feature-card-h: 280px;
+
+$feature-overlay-img-w: 320px;
+$feature-overlay-translate-x: -180px;
+$feature-overlay-translate-y: 170px;
+$feature-overlay-radius: 1rem;
+
+$feature-sm-card-w: 15rem;
+$feature-sm-card-max-w-mobile: 18rem;
+$feature-sm-img-h: 220px;
+
+$feature-logo-airbnb-h: 30px;
+$feature-logo-company-sz: 36px;
+$feature-logo-award-h: 40px;
+
+$feature-collage-gap: 1.5rem;
+$feature-overshoot: 1.5rem;
+
+$spacers: map-merge(
+  $spacers,
+  (
+    6: 2.5rem,
+    7: 10rem,
+    8: 12rem,
+    9: 14rem,
+    10: 16rem,
+    11: 18rem,
+    12: 20rem
+  )
+);
