@@ -5,18 +5,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Odoo</title>
-  <link type="image/x-icon" rel="shortcut icon" href="https://odoocdn.com/web/image/website/1/favicon?unique=7a84c67" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://odoocdn.com/web/image/website/1/favicon?unique=7a84c67" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="dist/css/main.css" />
   <script defer src="dist/js/bootstrap.bundle.min.js"></script>
   <script defer src="dist/js/main.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script defer src="src/js/main.js"></script>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-brand navbar-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-brand sticky-top">
     <div class="container py-2 border-bottom border-opacity-25">
-      <a class="navbar-brand fw-semibold mb-0">
-        <img src="src/assets/icons/odoo-white.svg" class="brand-logo" alt="" />
+      <a class="navbar-brand fw-semibold mb-0" href="#home">
+        <img src="src/assets/icons/odoo-white.svg" class="brand-logo" alt="Odoo" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,77 +27,378 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <div class="nav-center">
           <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#products">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#pages">Pages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#apps">Apps</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#docs">Docs</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pages">Pages</a></li>
+            <li class="nav-item"><a class="nav-link" href="#apps">Apps</a></li>
+            <li class="nav-item"><a class="nav-link" href="#docs">Docs</a></li>
           </ul>
         </div>
-        <div class="d-flex gap-4">
-          <a class="btn btn-md text-white" href="#signin">Sign in</a>
-          <a class="btn btn-light btn-app rounded-1 d-inline-flex align-items-center gap-3 text-dark" href="#buynow"><i
-              class="bi bi-basket3" aria-hidden="true"> </i>Buy now</a>
+        <div class="d-flex gap-3 gap-lg-4">
+          <a class="btn text-white" href="#signin">Sign in</a>
+
+          <a class="btn btn-light btn-app rounded-1 d-inline-flex align-items-center gap-3 text-dark" href="#buynow">
+            <i class="bi bi-basket3" aria-hidden="true"></i>
+            Buy now
+          </a>
         </div>
       </div>
     </div>
   </nav>
-  <section id="home" class="bg-brand text-white py-5">
-    <div class="container">
-      <div class="row align-items-center g-1 justify-content-between">
-        <div class="col-12 col-md-6 col-lg-6 d-flex flex-column gap-4">
-          <h1>Development<br />done right</h1>
-          <p>Build a beautiful, modern website<br />with flexible components built from scratch.</p>
-          <div>
-            <a class="btn btn-light btn-app rounded-1 d-inline-flex align-items-center gap-2" href="#getStarted">
-              Get Started<i class="bi bi-plus-lg" aria-hidden="true"></i></a>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="bg-brand text-white py-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-between g-4 g-lg-1">
+          <div class="col-12 col-md-6 d-flex flex-column gap-4">
+            <h1 class="mb-0">Development<br />done right</h1>
+
+            <p class="mb-0">
+              Build a beautiful, modern website<br />
+              with flexible components built from scratch.
+            </p>
+
+            <div>
+              <a class="btn btn-light btn-app rounded-1 d-inline-flex align-items-center gap-2" href="#getStarted">
+                Get Started <i class="bi bi-plus-lg" aria-hidden="true"></i>
+              </a>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3 align-items-end">
+              <p class="fs-6 mb-0">Trusted by:</p>
+              <img class="icon-logo-white" src="/src/assets/icons/google-white.svg" alt="Google" />
+              <img class="icon-logo-white" src="/src/assets/icons/spotify-white.svg" alt="Spotify" />
+              <img class="icon-logo-white" src="/src/assets/icons/airbnb-white.svg" alt="Airbnb" />
+              <img class="icon-logo-white" src="/src/assets/icons/paypal-white.svg" alt="PayPal" />
+            </div>
           </div>
-          <div class="d-flex flex-wrap gap-3 align-items-end">
-            <p class="fs-6 mb-0">Trusted by:</p>
-            <img class="icon-logo-white" src="/src/assets/icons/google-white.svg" alt="Google" />
-            <img class="icon-logo-white" src="/src/assets/icons/spotify-white.svg" alt="Spotify" />
-            <img class="icon-logo-white" src="/src/assets/icons/airbnb-white.svg" alt="Airbnb" />
-            <img class="icon-logo-white" src="/src/assets/icons/paypal-white.svg" alt="PayPal" />
+
+          <div class="col-12 col-lg-6 bg-white hero-panel text-dark">
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="mb-0 fw-semibold">Manage cards</p>
+              <a class="btn btn-outline-light btn-play text-dark" href="#getStarted">Add new</a>
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <img class="img-fluid rounded-3 hero-panel__card" src="/src/assets/img/mastercard.png"
+                alt="Card preview" />
+            </div>
+
+            <ul class="list-unstyled m-0">
+              <li class="py-3 border-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="mb-0 fw-semibold">Starbucks</p>
+                  <p class="mb-0 fw-semibold">$5,50 USD</p>
+                </div>
+                <p class="mb-0 text-muted">Pending - San Francisco, United States</p>
+              </li>
+
+              <li class="py-3 border-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="mb-0 fw-semibold">Starbucks</p>
+                  <p class="mb-0 fw-semibold">$5,50 USD</p>
+                </div>
+                <p class="mb-0 text-muted">Pending - San Francisco, United States</p>
+              </li>
+            </ul>
+
+            <a class="btn btn-link btn-link-dotted align-self-start p-0" href="#all">
+              View all <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            </a>
           </div>
-        </div>
-        <div class="col-12 col-lg-6 bg-white hero-panel text-dark">
-          <div class="d-flex justify-content-between align-items-center">
-            <p class="mb-0 fw-semibold">Manage cards</p>
-            <a class="btn btn-outline-dark btn-app" href="#getStarted">Add new</a>
-          </div>
-          <div class="d-flex justify-content-center">
-            <img class="img-fluid rounded-3 hero-panel__card" src="/src/assets/img/mastercard.png" alt="" />
-          </div>
-          <ul class="list-unstyled m-0">
-            <li class="py-3 border-bottom">
-              <div class="d-flex justify-content-between align-items-center">
-                <p class="mb-0 fw-semibold">Starbucks</p>
-                <p class="mb-0 fw-semibold">$5,50 USD</p>
-              </div>
-              <p class="mb-0 text-muted">Pending - San Francisco, United States</p>
-            </li>
-            <li class="py-3 border-bottom">
-              <div class="d-flex justify-content-between align-items-center">
-                <p class="mb-0 fw-semibold">Starbucks</p>
-                <p class="mb-0 fw-semibold">$5,50 USD</p>
-              </div>
-              <p class="mb-0 text-muted">Pending - San Francisco, United States</p>
-            </li>
-          </ul>
-          <a class="btn btn-link btn-link-dotted align-self-start" href="#all">View all<i class="bi bi-chevron-right"></i></a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="pt-7 pb-5">
+      <div class="container px-4 px-lg-5 vstack gap-6">
+        <article class="row align-items-center g-5 py-5">
+          <div class="col-12 col-lg-6">
+            <div class="card shadow-sm border-0 feature-card">
+              <img class="feature-card__img img-fluid" src="/src/assets/img/img_01.jpg" alt="" aria-hidden="true" />
+
+              <div class="card-body d-flex flex-column gap-6 p-4">
+                <h3 class="h5 mb-0">Awesome projects</h3>
+
+                <div>
+                  <p class="small mb-2 fw-semibold">Create the new logo</p>
+                  <div class="progress feature-progress" role="progressbar" aria-label="Create the new logo"
+                    aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-warning" style="width: 55%"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <p class="small mb-2 fw-semibold">Set up the color palette</p>
+                  <div class="progress feature-progress" role="progressbar" aria-label="Set up the color palette"
+                    aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-warning" style="width: 70%"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="small mb-2 fw-semibold">Wireframe and prototype</p>
+                    <p class="small mb-2 text-muted">6:50 <i class="bi bi-chevron-right" aria-hidden="true"></i></p>
+                  </div>
+
+                  <div class="progress feature-progress" role="progressbar" aria-label="Wireframe and prototype"
+                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-warning" style="width: 80%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 d-flex flex-column gap-3 mb-4 mb-lg-0">
+            <span class="badge text-bg-warning rounded-pill align-self-start badge-app text-white">Tools</span>
+            <h2 class="h1 mb-0">We build for designers and developers</h2>
+            <p class="mb-0 lh-lg text-muted fs-p-md">
+              Get components and examples, including tons<br />
+              of variables that will help you grow your business.
+            </p>
+          </div>
+        </article>
+        <article class="row align-items-center g-5 py-5">
+          <div class="col-12 col-lg-6 d-flex flex-column gap-3 mb-4 mb-lg-0">
+            <span class="badge bg-brand-green rounded-pill align-self-start badge-app text-white">Features</span>
+
+            <h4 class="mb-0">
+              Get components and examples, including <br>
+              tons of variables that will help you grow your business.
+            </h4>
+
+            <div class="d-flex flex-column gap-1">
+              <p class="mb-0 lh-lg fs-p-md text-brand-green fw-semibold">
+                <i class="bi bi-check-square-fill me-2 text-brand-green" aria-hidden="true"></i>
+                Perfect for modern startups
+              </p>
+              <p class="mb-0 lh-lg fs-p-md text-brand-green fw-semibold">
+                <i class="bi bi-check-square-fill me-2 text-brand-green" aria-hidden="true"></i>
+                Fully customizable and scalable
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="position-relative">
+              <img src="/src/assets/img/img_02.jpg" alt="" class="img-fluid rounded-3" />
+
+              <button class="btn btn-light btn-play text-dark position-absolute top-0 start-0 m-3 z-3">
+                Play video <i class="bi bi-play" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="row align-items-center g-5 py-5">
+          <div class="col-12 col-lg-6">
+            <div class="row feature-collage">
+              <div class="col-12 col-md-6 feature-left-col">
+                <div class="feature-left-stack">
+                  <div class="card shadow-sm border-0 feature-card-sm">
+                    <img src="/src/assets/img/person_03.jpg" class="card-img-top feature-card-sm__img object-fit-cover"
+                      alt="Jimmy Hendrix" />
+                    <div class="card-body d-flex align-items-center gap-2 py-3">
+                      <div class="avatar-circle bg-brand-yellow text-dark fw-semibold">JH</div>
+                      <p class="mb-0 flex-grow-1">Jimmy Hendrix</p>
+                      <i class="bi bi-heart text-brand-red" aria-hidden="true"></i>
+                    </div>
+                  </div>
+
+                  <div class="card shadow-sm border-0 feature-card-sm">
+                    <div class="card-body d-flex align-items-center gap-3 py-3">
+                      <div class="icon-circle bg-brand-green text-white">
+                        <i class="bi bi-check-lg" aria-hidden="true"></i>
+                      </div>
+                      <div>
+                        <p class="mb-0 fw-semibold fs-p-md">300+ components</p>
+                        <p class="mb-0 text-muted fs-p-md">Built to be customized.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 feature-right-col">
+                <div class="feature-right-stack">
+                  <div class="card shadow-sm border-0 h-100">
+                    <div
+                      class="card-body d-flex flex-column justify-content-center align-items-center text-center gap-3 py-4">
+                      <img src="/src/assets/icons/airbnb.svg" alt="Airbnb" class="logo-airbnb" />
+                      <div class="rating" style="--rating:4.00" aria-label="4.0 out of 5 stars"></div>
+                      <div>
+                        <p class="mb-1 fw-semibold">4.0 out of 5 stars</p>
+                        <p class="mb-0 text-muted small">from 23 reviews</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card shadow-sm border-0 h-100">
+                    <div
+                      class="card-body d-flex flex-column justify-content-center align-items-center text-center gap-2 py-4">
+                      <img src="/src/assets/img/company_01.png" alt="" class="logo-company rounded-circle" />
+                      <p class="mb-0 fw-semibold">Website UI Kit</p>
+                      <div class="d-flex justify-content-center gap-2">
+                        <span class="badge rounded-circle text-bg-secondary">A</span>
+                        <span class="badge rounded-circle text-bg-secondary">B</span>
+                        <span class="badge rounded-circle text-bg-secondary">C</span>
+                      </div>
+                      <div class="d-flex justify-content-center gap-4">
+                        <i class="bi bi-paperclip text-muted fw-semibold"></i>
+                        <i class="bi bi-eye-fill text-muted fw-semibold"></i>
+                        <i class="bi bi-heart-fill text-muted fw-semibold"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 d-flex flex-column gap-3">
+            <span class="badge bg-brand-blue rounded-pill align-self-start badge-app text-white">Technology</span>
+            <h2 class="mb-0">We use the latest<br> technologies on the market</h2>
+            <p class="mb-0 lh-lg text-muted">
+              Get components and examples, including tons of<br />
+              variables that will help you grow your business.
+            </p>
+            <a class="text-brand-blue fs-p-md fw-semibold text-decoration-underline align-self-start"
+              href="#case-studies">
+              See case studies
+            </a>
+          </div>
+        </article>
+        <article class="row align-items-center g-5 py-5">
+          <div class="col-12 col-lg-6 d-flex flex-column gap-3 mb-4 mb-lg-0">
+            <span class="badge bg-brand-yellow rounded-pill align-self-start badge-app text-white">
+              Easy to install
+            </span>
+
+            <h2 class="mb-0">Download, install and run.</h4>
+
+              <p class="mb-0 lh-lg text-muted">
+                Get components and examples, including tons of variables<br>
+                that will help you grow your business.
+              </p>
+
+              <div class="store-badges d-flex gap-3 flex-wrap">
+                <a class="store-badge" aria-label="Download on the App Store">
+                  <img class="store-badge__img" src="/src/assets/img/AppleStore.svg" alt="Download on the App Store" />
+                </a>
+
+                <a class="store-badge" aria-label="Get it on Google Play">
+                  <img class="store-badge__img" src="/src/assets/img/GooglePlay.png" alt="Get it on Google Play" />
+                </a>
+              </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="position-relative">
+              <img src="/src/assets/img/img_03.jpg" alt="" class="img-fluid rounded-3" />
+
+              <a class="btn btn-light btn-play text-dark position-absolute top-0 start-0 m-3 z-3" href="#video">
+                Play video <i class="bi bi-play" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="col-12 col-lg-6 bg-brand-dark-blue product-panel text-white w-auto">
+            <div class="d-flex justify-content-between align-items-center p-5">
+              <div class="col-12 col-lg-8 d-flex flex-column gap-3">
+                <h3 class="mb-0 fw-semibold">Infinite solutions</h3>
+                <p>Intuitive markup, powerful and lightning-fast build tools,<br> everything you need to turn your ideas
+                  into incredible products</p>
+              </div>
+              <a class="btn btn-light btn-play" href="#getStarted">Learn more</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- Awards -->
+    <section id="awards" class="bg-brand-gray pt-5">
+      <div class="container px-4 px-lg-5 vstack gap-6">
+        <div class="d-flex flex-column gap-3">
+          <span class="badge bg-brand-blue rounded-pill align-self-start badge-app text-white">Awards</span>
+          <p class="mb-0 fw-semibold">Awards for design, creativity, and innovation on the Internet.</p>
+        </div>
+      </div>
+
+      <div class="container-fluid px-0">
+        <div class="awards-viewport">
+          <div class="awards-track d-flex flex-nowrap gap-5">
+            <div class="awards-card">
+              <a class="card award-card shadow-sm border-0 text-decoration-none" href="#award-1">
+                <div
+                  class="card-body d-flex flex-column justify-content-center align-items-center text-center gap-3 py-4">
+                  <img src="/src/assets/icons/airbnb.svg" alt="Airbnb" class="logo-award" />
+                  <div class="rating" style="--rating:4.95" aria-label="4.95 out of 5 stars"></div>
+                  <div>
+                    <p class="mb-1 fw-semibold">4.95 out of 5 stars</p>
+                    <p class="mb-0 text-muted small">from 23 reviews</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="awards-card">
+              <a class="card award-card shadow-sm border-0 text-decoration-none" href="#award-2">
+                <div
+                  class="card-body d-flex flex-column justify-content-center align-items-center text-center gap-3 py-4">
+                  <img src="/src/assets/icons/amazon.svg" alt="Amazon" class="logo-award" />
+                  <div class="d-flex flex-column gap-2">
+                    <p class="mb-0 text-muted small">They build modern-looking websites easily using Tabs.</p>
+                    <span class="award-cta">Learn more</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="awards-card">
+              <a class="card award-card shadow-sm border-0 text-decoration-none" href="#award-3">
+                <div
+                  class="card-body d-flex flex-column justify-content-center align-items-center text-center gap-3 py-4">
+                  <img src="/src/assets/icons/slack.svg" alt="Slack" class="logo-award" />
+                  <div class="d-flex flex-column gap-2">
+                    <p class="mb-0 text-muted small">They build modern-looking websites easily using Tabs.</p>
+                    <span class="award-cta">Learn more</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="awards-card">
+              <a class="card award-card shadow-sm border-0 text-decoration-none" href="#award-4">
+                <div
+                  class="card-body d-flex flex-column justify-content-center align-items-center text-center gap-3 py-4">
+                  <img src="/src/assets/icons/spotify.svg" alt="Spotify" class="logo-award" />
+                  <div class="rating" style="--rating:4.70" aria-label="4.7 out of 5 stars"></div>
+                  <div>
+                    <p class="mb-1 fw-semibold">4.7 out of 5 stars</p>
+                    <p class="mb-0 text-muted small">from 19 reviews</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="awards-card">
+              <a class="card award-card shadow-sm border-0 text-decoration-none" href="#award-5">
+                <div
+                  class="card-body d-flex flex-column justify-content-center align-items-center text-center gap-3 py-4">
+                  <img src="/src/assets/icons/paypal.svg" alt="PayPal" class="logo-award" />
+                  <div class="d-flex flex-column gap-2">
+                    <p class="mb-0 text-muted small">They build modern-looking websites easily using Tabs.</p>
+                    <span class="award-cta">Learn more</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+    </section>
+  </main>
 </body>
+
 </html>
