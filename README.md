@@ -105,4 +105,4 @@ Bad:
 - If the promise is “development done right,” product screenshots, UI components, or real flows usually communicate better than stock-style imagery.
 
 ## Note
-- Since no mobile mockup was provided, I assumed a standard responsive behavior—but I’d validate key breakpoints and how components behave on smaller screens.
+- Since no mobile mockup was provided, I assumed a standard responsive behavior, but I’d validate key breakpoints and how components behave on smaller screens.
