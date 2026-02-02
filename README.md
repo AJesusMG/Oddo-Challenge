@@ -42,7 +42,7 @@ Output: `dist/css/main.css` and `dist/js/*`.
 
 ## Questions
 
-1. What do you find good/bad in this mock-up?
+# What do you find good/bad in this mock-up?
 
 Good:
 - Solid color palette and professional tone. The hero blue and minimalist style feel confident and serious.
@@ -60,7 +60,7 @@ Bad:
 - Color hierarchy isn’t clearly defined. The main blue is very strong in the hero but is reused inconsistently for other key actions, so “primary vs secondary vs tertiary” isn’t always clear.
 - The “dotted line” in the features section is a nice idea but feels a bit disconnected. It doesn’t clearly connect the two cards or reinforce the flow between them.
 
-2. What would you improve?
+# What would you improve?
 
 ### Clarify the CTA hierarchy.
 - Stick to one primary CTA per section (especially in the hero).
@@ -87,7 +87,7 @@ Bad:
 ### Responsive plan (no mobile mockup yet).
 - Define how the nav collapses, how sections stack, and how cards/carousels behave on mobile.
 
-3. What would you change?
+# What would you change?
 
 ### Make the hero feel more “alive” and more product-driven.
 - Right now it looks professional but a bit flat/boring. I’d redesign the hero to communicate the value more clearly: a stronger product preview or a more compelling visual narrative (not just decorative elements).
