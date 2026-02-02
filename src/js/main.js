@@ -1,7 +1,7 @@
 const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (!prefersReduced) {
-  const viewport = document.querySelector(".awards-viewport");
+
   const track = document.querySelector(".awards-track");
 
   const original = Array.from(track.children);
@@ -17,7 +17,7 @@ if (!prefersReduced) {
 
   const marqueeTl = gsap.to(track, {
     x: -half,
-    duration: 22,
+    duration: 15,
     ease: "none",
     repeat: -1,
     modifiers: {
@@ -33,15 +33,8 @@ if (!prefersReduced) {
 
   gsap.set(cards, { y: (i) => (i % 2 === 0 ? -amps[i] : amps[i]) });
 
-  const waveTl = gsap.timeline({ repeat: -1, yoyo: true });
-  waveTl.to(cards, {
-    y: (i) => (i % 2 === 0 ? amps[i] : -amps[i]),
-    duration: 1.6,
-    ease: "sine.inOut"
-  }, 0);
-
-  const pauseAll = () => { marqueeTl.pause(); waveTl.pause(); };
-  const playAll = () => { marqueeTl.play(); waveTl.play(); };
+  const pauseAll = () => { marqueeTl.pause(); };
+  const playAll = () => { marqueeTl.play(); };
 
   awardCards.forEach(el => {
     el.addEventListener("pointerenter", pauseAll);

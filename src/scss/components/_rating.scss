@@ -1,0 +1,38 @@
+.rating {
+  --star-size: 1rem;
+  --star-count: 5;
+  --star-bg: #e9ecef;
+  --star-fg: var(--bs-warning);
+
+  width: calc(var(--star-size) * var(--star-count));
+  height: var(--star-size);
+  display: inline-block;
+  position: relative;
+
+  background: var(--star-bg);
+
+  -webkit-mask-image: url("/src/assets/icons/star-fill.svg");
+  -webkit-mask-repeat: repeat-x;
+  -webkit-mask-size: var(--star-size) var(--star-size);
+
+  mask-image: url("/src/assets/icons/star-fill.svg");
+  mask-repeat: repeat-x;
+  mask-size: var(--star-size) var(--star-size);
+}
+
+.rating::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: var(--star-fg);
+  width: calc((min(var(--rating), 5) / 5) * 100%);
+
+  -webkit-mask-image: inherit;
+  -webkit-mask-repeat: inherit;
+  -webkit-mask-size: inherit;
+
+  mask-image: inherit;
+  mask-repeat: inherit;
+  mask-size: inherit;
+}

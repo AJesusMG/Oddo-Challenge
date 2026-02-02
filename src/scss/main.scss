@@ -1,9 +1,10 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
 
-@import "./tokens";
-
+@import "./bs-overrides";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+@import "./tokens";
 @import "./utilities";
 @import "./components";
