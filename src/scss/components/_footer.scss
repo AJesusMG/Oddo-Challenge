@@ -1,0 +1,33 @@
+.footer__hr {
+  border-color: rgba(255, 255, 255, .10);
+  opacity: 1;
+}
+
+.footer__link {
+  color: rgba(255, 255, 255, .70);
+  text-decoration: none;
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.footer__social {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.accordion-lead {
+  gap: .5rem;
+}
+
+@media (max-width: 575.98px) {
+  .footer .btn-now,
+  .footer .btn-play {
+    width: 100%;
+    justify-content: center;
+  }
+}

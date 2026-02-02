@@ -5,26 +5,13 @@ $brand-red: #ff0000;
 $brand-dark-blue: #161348;
 $brand-gray: #FAFBFF;
 
-$custom-colors: (
-  "brand": $brand-blue,
-  "brand-blue": $brand-blue,
-  "brand-yellow": $brand-yellow,
-  "brand-green": $brand-green,
-  "brand-red": $brand-red,
-  "brand-dark-blue": $brand-dark-blue,
-  "brand-gray": $brand-gray,
-);
-
-$theme-colors: map-merge($theme-colors, $custom-colors);
-
-$navbar-padding-y: 0.85rem;
-
 $btn-app-py: .90rem;
 $btn-app-px: 1.55rem;
 $btn-app-font-size: .785rem;
 $btn-app-radius: .8rem;
 $btn-app-font-weight: 600;
 $btn-app-gap: .5rem;
+$btn-app-bg: #ffffff;
 
 $btn-play-py: .65rem;
 $btn-play-px: 1.45rem;
@@ -32,7 +19,17 @@ $btn-play-font-size: .785rem;
 $btn-play-radius: .7rem;
 $btn-play-font-weight: 600;
 $btn-play-gap: .5rem;
-$btn-play-bg: #fff;
+$btn-play-bg: #ffffff;
+$btn-play-text-color: #000000;
+
+$btn-now-py: .65rem;
+$btn-now-px: 1.6rem;
+$btn-now-font-size: .785rem;
+$btn-now-radius: .4rem;
+$btn-now-font-weight: 600;
+$btn-now-gap: .5rem;
+$btn-now-text-color: #ffffff;
+$btn-now-bg: $brand-blue;
 
 $badge-padding-y: .40rem;
 $badge-padding-x: .6rem;
@@ -79,15 +76,18 @@ $feature-logo-award-h: 40px;
 $feature-collage-gap: 1.5rem;
 $feature-overshoot: 1.5rem;
 
-$spacers: map-merge(
-  $spacers,
-  (
-    6: 2.5rem,
-    7: 10rem,
-    8: 12rem,
-    9: 14rem,
-    10: 16rem,
-    11: 18rem,
-    12: 20rem
-  )
-);
+$accordion-app-py: 1.50rem;
+$accordion-app-px: 1.40rem;
+$accordion-app-font-size: .875rem;
+$accordion-app-radius: .80rem;
+$accordion-app-font-weight: 600;
+
+$accordion-app-border-width: 1px;
+$accordion-app-border-color: rgba(22, 19, 72, .12);
+
+$accordion-app-shadow: 0 .75rem 2rem rgba(22, 19, 72, .08);
+$accordion-app-body-bg: #FAFBFF;
+
+$accordion-app-active-accent: $brand-blue;
+
+$accordion-app-icon-size: 1rem;
