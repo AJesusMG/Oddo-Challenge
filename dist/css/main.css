@@ -5346,12 +5346,12 @@ textarea.form-control-lg {
 }
 
 .badge {
-  --bs-badge-padding-x: 0.6rem;
-  --bs-badge-padding-y: 0.4rem;
-  --bs-badge-font-size: 0.665rem;
-  --bs-badge-font-weight: 600;
+  --bs-badge-padding-x: 0.65em;
+  --bs-badge-padding-y: 0.35em;
+  --bs-badge-font-size: 0.75em;
+  --bs-badge-font-weight: 700;
   --bs-badge-color: #fff;
-  --bs-badge-border-radius: 0.25rem;
+  --bs-badge-border-radius: var(--bs-border-radius);
   display: inline-block;
   padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
   font-size: var(--bs-badge-font-size);
@@ -15311,6 +15311,30 @@ textarea.form-control-lg {
     justify-content: center;
   }
 }
+@media (max-width: 991.98px) {
+  .app-signin {
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 0.5rem;
+    text-decoration: none;
+  }
+  .app-signin:hover,
+  .app-signin:focus-visible {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
+@media (max-width: 991.98px) {
+  .app-signin {
+    width: 100%;
+  }
+  .navbar .btn-app {
+    width: 100%;
+    justify-content: center;
+  }
+}
 .navbar .navbar-nav {
   gap: 1rem;
 }
@@ -15338,32 +15362,104 @@ textarea.form-control-lg {
   display: block;
 }
 
+.logo-airbnb {
+  height: 30px;
+  width: auto;
+}
+
+.logo-award {
+  height: 40px;
+  width: auto;
+}
+
+.logo-company {
+  height: 36px;
+  width: 36px;
+}
+
+.trusted-logos .icon-logo-white {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 575.98px) {
+  .trusted-logos {
+    gap: 0.75rem;
+  }
+  .trusted-logos .icon-logo-white {
+    height: 22px; /* un poco más chico en mobile */
+  }
+}
 .btn-icon {
   width: 1em;
   height: 1em;
   display: block;
 }
 
-.btn-app {
-  padding: 0.9rem 1.55rem;
-  border-radius: 0.8rem;
-  font-size: 0.785rem;
-  font-weight: 600;
-  line-height: 1.1;
+.btn-app,
+.btn-play,
+.btn-now {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  line-height: 1.1;
+}
+
+.btn-app {
+  --bs-btn-padding-y: 0.9rem;
+  --bs-btn-padding-x: 1.55rem;
+  --bs-btn-font-size: 0.785rem;
+  --bs-btn-font-weight: 600;
+  --bs-btn-border-radius: 0.8rem;
+  --bs-btn-color: #000;
+  --bs-btn-bg: #ffffff;
+  --bs-btn-border-color: #ffffff;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: rgb(239.7, 239.7, 239.7);
+  --bs-btn-hover-border-color: rgb(239.7, 239.7, 239.7);
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: rgb(224.4, 224.4, 224.4);
+  --bs-btn-active-border-color: rgb(224.4, 224.4, 224.4);
+  --bs-btn-focus-shadow-rgb: 255, 255, 255;
   gap: 0.5rem;
 }
 
 .btn-play {
-  padding: 0.65rem 1.45rem;
-  border-radius: 0.7rem;
-  font-size: 0.785rem;
-  font-weight: 600;
-  line-height: 1.1;
-  background-color: #fff;
-  display: inline-flex;
-  align-items: center;
+  --bs-btn-padding-y: 0.65rem;
+  --bs-btn-padding-x: 1.45rem;
+  --bs-btn-font-size: 0.785rem;
+  --bs-btn-font-weight: 600;
+  --bs-btn-border-radius: 0.7rem;
+  --bs-btn-color: #000000;
+  --bs-btn-bg: #ffffff;
+  --bs-btn-border-color: #ffffff;
+  --bs-btn-hover-color: #000000;
+  --bs-btn-hover-bg: rgb(229.5, 229.5, 229.5);
+  --bs-btn-hover-border-color: rgb(229.5, 229.5, 229.5);
+  --bs-btn-active-color: #000000;
+  --bs-btn-active-bg: #cccccc;
+  --bs-btn-active-border-color: #cccccc;
+  --bs-btn-focus-shadow-rgb: 255, 255, 255;
+  gap: 0.5rem;
+}
+
+.btn-now {
+  --bs-btn-padding-y: 0.65rem;
+  --bs-btn-padding-x: 1.6rem;
+  --bs-btn-font-size: 0.785rem;
+  --bs-btn-font-weight: 600;
+  --bs-btn-border-radius: 0.4rem;
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: #038AFF;
+  --bs-btn-border-color: #038AFF;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: rgb(2.7, 124.2, 229.5);
+  --bs-btn-hover-border-color: rgb(2.7, 124.2, 229.5);
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: rgb(2.4, 110.4, 204);
+  --bs-btn-active-border-color: rgb(2.4, 110.4, 204);
+  --bs-btn-focus-shadow-rgb: 3, 138, 255;
   gap: 0.5rem;
 }
 
@@ -15374,7 +15470,29 @@ textarea.form-control-lg {
   text-decoration-thickness: 1px;
   font-size: 0.875rem;
 }
+.btn-link-dotted:hover, .btn-link-dotted:focus-visible {
+  text-decoration-thickness: 2px;
+}
 
+.link-underline-strong {
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.25em;
+  text-decoration-skip-ink: auto;
+}
+
+.link-underline-strong:hover,
+.link-underline-strong:focus-visible {
+  text-decoration-thickness: 4px;
+}
+
+@media (max-width: 575.98px) {
+  .btn-app {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
 .badge-app {
   padding: 0.4rem 0.6rem;
   border-radius: 0.25rem;
@@ -15393,6 +15511,7 @@ textarea.form-control-lg {
   border-radius: 1rem 1rem 6rem 1rem;
   padding: 1.25rem;
   max-width: 460px;
+  background: #fff;
 }
 
 .product-panel {
@@ -15403,6 +15522,11 @@ textarea.form-control-lg {
   padding: 1.25rem;
 }
 
+@media (max-width: 991.98px) {
+  .hero-panel {
+    margin-inline: auto;
+  }
+}
 .feature-progress {
   height: 0.2rem;
   border-radius: 999px;
@@ -15451,6 +15575,24 @@ textarea.form-control-lg {
   font-size: 1rem;
 }
 
+.avatar-stack {
+  display: inline-flex;
+  align-items: center;
+}
+
+.avatar-stack__img {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.12);
+}
+
+.avatar-stack__img + .avatar-stack__img {
+  margin-left: -10px;
+}
+
 .feature-card-sm {
   width: 15rem;
 }
@@ -15458,21 +15600,6 @@ textarea.form-control-lg {
 .feature-card-sm__img {
   height: 220px;
   width: 100%;
-}
-
-.logo-airbnb {
-  height: 30px;
-  width: auto;
-}
-
-.logo-award {
-  height: 40px;
-  width: auto;
-}
-
-.logo-company {
-  height: 36px;
-  width: 36px;
 }
 
 .feature-collage {
@@ -15513,11 +15640,8 @@ textarea.form-control-lg {
     transform: none;
     display: block;
     width: 100%;
-    max-width: 420px;
+    max-width: 100%;
     margin: 0 auto 1rem;
-  }
-  .hero-panel {
-    margin-inline: auto;
   }
 }
 @media (max-width: 767.98px) {
@@ -15537,6 +15661,15 @@ textarea.form-control-lg {
     width: 100%;
     height: auto;
     transform: none;
+  }
+}
+.product-cta .product-panel {
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .feature-collage {
+    row-gap: 1.5rem;
   }
 }
 .store-badges {
@@ -15632,6 +15765,114 @@ textarea.form-control-lg {
   .award-card:hover,
   .award-card:focus-visible {
     transform: none;
+  }
+}
+.accordion-app {
+  --bs-accordion-border-width: 0;
+  --bs-accordion-bg: transparent;
+  --bs-accordion-color: inherit;
+  --bs-accordion-btn-padding-x: 1.4rem;
+  --bs-accordion-btn-padding-y: 1.5rem;
+  --bs-accordion-btn-font-size: 0.875rem;
+  --bs-accordion-btn-font-weight: 600;
+  --bs-accordion-active-bg: #fff;
+  --bs-accordion-active-color: inherit;
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-btn-icon: none;
+  --bs-accordion-btn-active-icon: none;
+}
+
+.accordion-app .accordion-item {
+  border: 1px solid rgba(22, 19, 72, 0.12);
+  border-radius: 0.8rem;
+  box-shadow: 0 0.75rem 2rem rgba(22, 19, 72, 0.08);
+  overflow: hidden;
+}
+
+.accordion-app .accordion-item + .accordion-item {
+  margin-top: 1rem;
+}
+
+.accordion-app .accordion-button {
+  background: #fff;
+  border: 0;
+}
+
+.accordion-app .accordion-button::after {
+  background-image: none;
+  width: 1rem;
+  height: 1rem;
+  font-family: "bootstrap-icons";
+  content: "\f64d";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  transform: rotate(0deg) scale(1);
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.accordion-app .accordion-button:not(.collapsed)::after {
+  content: "\f63b";
+  transform: rotate(180deg) scale(1.05);
+  opacity: 1;
+}
+
+.accordion-app .accordion-body {
+  background: #FAFBFF;
+  border-top: 1px solid rgba(22, 19, 72, 0.08);
+}
+
+.accordion-app .accordion-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 999px;
+  background: rgba(3, 138, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.accordion-app .accordion-button:not(.collapsed) .accordion-icon {
+  background: rgba(3, 138, 255, 0.16);
+}
+
+.accordion-lead__icon {
+  -webkit-text-stroke: 0.6px currentColor;
+}
+
+.footer__hr {
+  border-color: rgba(255, 255, 255, 0.1);
+  opacity: 1;
+}
+
+.footer__link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.footer__social {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.accordion-lead {
+  gap: 0.5rem;
+}
+
+@media (max-width: 575.98px) {
+  .footer .btn-now,
+  .footer .btn-play {
+    width: 100%;
+    justify-content: center;
   }
 }
 

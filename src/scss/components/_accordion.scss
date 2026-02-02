@@ -1,0 +1,81 @@
+.accordion-app {
+  --bs-accordion-border-width: 0;
+  --bs-accordion-bg: transparent;
+  --bs-accordion-color: inherit;
+
+  --bs-accordion-btn-padding-x: #{$accordion-app-px};
+  --bs-accordion-btn-padding-y: #{$accordion-app-py};
+  --bs-accordion-btn-font-size: #{$accordion-app-font-size};
+  --bs-accordion-btn-font-weight: #{$accordion-app-font-weight};
+
+  --bs-accordion-active-bg: #fff;
+  --bs-accordion-active-color: inherit;
+
+  --bs-accordion-btn-focus-box-shadow: none;
+
+  --bs-accordion-btn-icon: none;
+  --bs-accordion-btn-active-icon: none;
+}
+
+.accordion-app .accordion-item {
+  border: $accordion-app-border-width solid $accordion-app-border-color;
+  border-radius: $accordion-app-radius;
+  box-shadow: $accordion-app-shadow;
+  overflow: hidden;
+}
+
+.accordion-app .accordion-item + .accordion-item {
+  margin-top: 1rem;
+}
+
+.accordion-app .accordion-button {
+  background: #fff;
+  border: 0;
+}
+
+.accordion-app .accordion-button::after {
+  background-image: none;
+  width: $accordion-app-icon-size;
+  height: $accordion-app-icon-size;
+
+  font-family: "bootstrap-icons";
+  content: "\F64D";
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: .9;
+  transform: rotate(0deg) scale(1);
+  transition: transform .18s ease, opacity .18s ease;
+}
+
+.accordion-app .accordion-button:not(.collapsed)::after {
+  content: "\F63B";
+  transform: rotate(180deg) scale(1.05);
+  opacity: 1;
+}
+
+.accordion-app .accordion-body {
+  background: $accordion-app-body-bg;
+  border-top: 1px solid rgba(22, 19, 72, .08);
+}
+
+.accordion-app .accordion-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 999px;
+  background: rgba(3, 138, 255, .10);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.accordion-app .accordion-button:not(.collapsed) .accordion-icon {
+  background: rgba(3, 138, 255, .16);
+}
+
+.accordion-lead__icon {
+  -webkit-text-stroke: .6px currentColor;
+}

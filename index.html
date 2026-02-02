@@ -15,8 +15,9 @@
 </head>
 
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-brand sticky-top">
-    <div class="container py-2 border-bottom border-opacity-25">
+    <div class="container border-bottom border-opacity-25 py-1">
       <a class="navbar-brand fw-semibold mb-0" href="#home">
         <img src="src/assets/icons/odoo-white.svg" class="brand-logo" alt="Odoo" />
       </a>
@@ -29,15 +30,14 @@
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-            <li class="nav-item"><a class="nav-link" href="#pages">Pages</a></li>
-            <li class="nav-item"><a class="nav-link" href="#apps">Apps</a></li>
-            <li class="nav-item"><a class="nav-link" href="#docs">Docs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </div>
-        <div class="d-flex gap-3 gap-lg-4">
-          <a class="btn text-white" href="#signin">Sign in</a>
-
-          <a class="btn btn-light btn-app rounded-1 d-inline-flex align-items-center gap-3 text-dark" href="#buynow">
+        <div class="d-flex flex-column flex-lg-row gap-2 gap-lg-4 mt-3 mt-lg-0">
+          <a class="btn btn-link text-white text-decoration-none px-0 px-lg-0 app-signin" href="#signin">Sign in</a>
+          <a class="btn btn-light btn-app text-dark" href="#buynow">
             <i class="bi bi-basket3" aria-hidden="true"></i>
             Buy now
           </a>
@@ -51,77 +51,71 @@
     <section id="home" class="bg-brand text-white py-5">
       <div class="container">
         <div class="row align-items-center justify-content-between g-4 g-lg-1">
-          <div class="col-12 col-md-6 d-flex flex-column gap-4">
-            <h1 class="mb-0">Development<br />done right</h1>
-
+          <div class="col-12 col-lg-6 d-flex flex-column gap-4">
+            <h1 class="mb-0">
+              Development <span class="d-none d-sm-inline"><br></span>done right
+            </h1>
             <p class="mb-0">
-              Build a beautiful, modern website<br />
+              Build a beautiful, modern website <span class="d-none d-sm-inline"><br></span>
               with flexible components built from scratch.
             </p>
-
             <div>
-              <a class="btn btn-light btn-app rounded-1 d-inline-flex align-items-center gap-2" href="#getStarted">
+              <a class="btn btn-light btn-app text-dark" href="#getStarted">
                 Get Started <i class="bi bi-plus-lg" aria-hidden="true"></i>
               </a>
             </div>
-
-            <div class="d-flex flex-wrap gap-3 align-items-end">
+            <div
+              class="trusted-by d-flex flex-column flex-sm-row gap-2 gap-sm-3 align-items-start align-items-sm-center">
               <p class="fs-6 mb-0">Trusted by:</p>
-              <img class="icon-logo-white" src="/src/assets/icons/google-white.svg" alt="Google" />
-              <img class="icon-logo-white" src="/src/assets/icons/spotify-white.svg" alt="Spotify" />
-              <img class="icon-logo-white" src="/src/assets/icons/airbnb-white.svg" alt="Airbnb" />
-              <img class="icon-logo-white" src="/src/assets/icons/paypal-white.svg" alt="PayPal" />
+              <div class="trusted-logos d-flex flex-wrap gap-3 align-items-center">
+                <img class="icon-logo-white" src="src/assets/icons/google-white.svg" alt="Google" />
+                <img class="icon-logo-white" src="src/assets/icons/spotify-white.svg" alt="Spotify" />
+                <img class="icon-logo-white" src="src/assets/icons/airbnb-white.svg" alt="Airbnb" />
+                <img class="icon-logo-white" src="src/assets/icons/paypal-white.svg" alt="PayPal" />
+              </div>
             </div>
           </div>
-
-          <div class="col-12 col-lg-6 bg-white hero-panel text-dark">
+          <div class="col-12 col-lg-6 hero-panel text-dark">
             <div class="d-flex justify-content-between align-items-center">
               <p class="mb-0 fw-semibold">Manage cards</p>
-              <a class="btn btn-outline-light btn-play text-dark" href="#getStarted">Add new</a>
+              <a class="btn btn-light btn-play text-dark" href="#getStarted">Add new</a>
             </div>
-
             <div class="d-flex justify-content-center">
-              <img class="img-fluid rounded-3 hero-panel__card" src="/src/assets/img/mastercard.png"
+              <img class="img-fluid rounded-3 hero-panel__card" src="src/assets/img/mastercard.png"
                 alt="Card preview" />
             </div>
-
             <ul class="list-unstyled m-0">
               <li class="py-3 border-bottom">
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="mb-0 fw-semibold">Starbucks</p>
-                  <p class="mb-0 fw-semibold">$5,50 USD</p>
+                  <p class="mb-0 fw-semibold">$5.50 USD</p>
                 </div>
                 <p class="mb-0 text-muted">Pending - San Francisco, United States</p>
               </li>
-
               <li class="py-3 border-bottom">
                 <div class="d-flex justify-content-between align-items-center">
-                  <p class="mb-0 fw-semibold">Starbucks</p>
-                  <p class="mb-0 fw-semibold">$5,50 USD</p>
+                  <p class="mb-0 fw-semibold">Apple Store</p>
+                  <p class="mb-0 fw-semibold">$129.00 USD</p>
                 </div>
-                <p class="mb-0 text-muted">Pending - San Francisco, United States</p>
+                <p class="mb-0 text-muted">Completed - San Jose, United States</p>
               </li>
             </ul>
-
-            <a class="btn btn-link btn-link-dotted align-self-start p-0" href="#all">
+            <a class="btn btn-link btn-link-dotted align-self-start p-0">
               View all <i class="bi bi-chevron-right" aria-hidden="true"></i>
             </a>
           </div>
         </div>
       </div>
     </section>
-
     <!-- PRODUCTS -->
     <section id="products" class="pt-7 pb-5">
       <div class="container px-4 px-lg-5 vstack gap-6">
         <article class="row align-items-center g-5 py-5">
           <div class="col-12 col-lg-6">
             <div class="card shadow-sm border-0 feature-card">
-              <img class="feature-card__img img-fluid" src="/src/assets/img/img_01.jpg" alt="" aria-hidden="true" />
-
+              <img class="feature-card__img img-fluid" src="src/assets/img/img_01.jpg" alt="" aria-hidden="true" />
               <div class="card-body d-flex flex-column gap-6 p-4">
                 <h3 class="h5 mb-0">Awesome projects</h3>
-
                 <div>
                   <p class="small mb-2 fw-semibold">Create the new logo</p>
                   <div class="progress feature-progress" role="progressbar" aria-label="Create the new logo"
@@ -129,7 +123,6 @@
                     <div class="progress-bar bg-warning" style="width: 55%"></div>
                   </div>
                 </div>
-
                 <div>
                   <p class="small mb-2 fw-semibold">Set up the color palette</p>
                   <div class="progress feature-progress" role="progressbar" aria-label="Set up the color palette"
@@ -137,13 +130,11 @@
                     <div class="progress-bar bg-warning" style="width: 70%"></div>
                   </div>
                 </div>
-
                 <div>
                   <div class="d-flex justify-content-between align-items-center">
                     <p class="small mb-2 fw-semibold">Wireframe and prototype</p>
                     <p class="small mb-2 text-muted">6:50 <i class="bi bi-chevron-right" aria-hidden="true"></i></p>
                   </div>
-
                   <div class="progress feature-progress" role="progressbar" aria-label="Wireframe and prototype"
                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                     <div class="progress-bar bg-warning" style="width: 80%"></div>
@@ -152,12 +143,12 @@
               </div>
             </div>
           </div>
-
           <div class="col-12 col-lg-6 d-flex flex-column gap-3 mb-4 mb-lg-0">
             <span class="badge text-bg-warning rounded-pill align-self-start badge-app text-white">Tools</span>
             <h2 class="h1 mb-0">We build for designers and developers</h2>
             <p class="mb-0 lh-lg text-muted fs-p-md">
-              Get components and examples, including tons<br />
+              Get components and examples, including tons
+              <span class="d-none d-sm-inline"><br></span>
               of variables that will help you grow your business.
             </p>
           </div>
@@ -165,12 +156,11 @@
         <article class="row align-items-center g-5 py-5">
           <div class="col-12 col-lg-6 d-flex flex-column gap-3 mb-4 mb-lg-0">
             <span class="badge bg-brand-green rounded-pill align-self-start badge-app text-white">Features</span>
-
             <h4 class="mb-0">
-              Get components and examples, including <br>
+              Get components and examples, including
+              <span class="d-none d-sm-inline"><br></span>
               tons of variables that will help you grow your business.
             </h4>
-
             <div class="d-flex flex-column gap-1">
               <p class="mb-0 lh-lg fs-p-md text-brand-green fw-semibold">
                 <i class="bi bi-check-square-fill me-2 text-brand-green" aria-hidden="true"></i>
@@ -182,12 +172,10 @@
               </p>
             </div>
           </div>
-
           <div class="col-12 col-lg-6">
             <div class="position-relative">
-              <img src="/src/assets/img/img_02.jpg" alt="" class="img-fluid rounded-3" />
-
-              <button class="btn btn-light btn-play text-dark position-absolute top-0 start-0 m-3 z-3">
+              <img src="src/assets/img/img_02.jpg" alt="" class="img-fluid rounded-3" />
+              <button type="button" class="btn btn-light btn-play text-dark position-absolute top-0 start-0 m-3 z-3">
                 Play video <i class="bi bi-play" aria-hidden="true"></i>
               </button>
             </div>
@@ -199,7 +187,7 @@
               <div class="col-12 col-md-6 feature-left-col">
                 <div class="feature-left-stack">
                   <div class="card shadow-sm border-0 feature-card-sm">
-                    <img src="/src/assets/img/person_03.jpg" class="card-img-top feature-card-sm__img object-fit-cover"
+                    <img src="src/assets/img/person_03.jpg" class="card-img-top feature-card-sm__img object-fit-cover"
                       alt="Jimmy Hendrix" />
                     <div class="card-body d-flex align-items-center gap-2 py-3">
                       <div class="avatar-circle bg-brand-yellow text-dark fw-semibold">JH</div>
@@ -207,7 +195,6 @@
                       <i class="bi bi-heart text-brand-red" aria-hidden="true"></i>
                     </div>
                   </div>
-
                   <div class="card shadow-sm border-0 feature-card-sm">
                     <div class="card-body d-flex align-items-center gap-3 py-3">
                       <div class="icon-circle bg-brand-green text-white">
@@ -226,7 +213,7 @@
                   <div class="card shadow-sm border-0 h-100">
                     <div
                       class="card-body d-flex flex-column justify-content-center align-items-center text-center gap-3 py-4">
-                      <img src="/src/assets/icons/airbnb.svg" alt="Airbnb" class="logo-airbnb" />
+                      <img src="src/assets/icons/airbnb.svg" alt="Airbnb" class="logo-airbnb" />
                       <div class="rating" style="--rating:4.00" aria-label="4.0 out of 5 stars"></div>
                       <div>
                         <p class="mb-1 fw-semibold">4.0 out of 5 stars</p>
@@ -237,17 +224,19 @@
                   <div class="card shadow-sm border-0 h-100">
                     <div
                       class="card-body d-flex flex-column justify-content-center align-items-center text-center gap-2 py-4">
-                      <img src="/src/assets/img/company_01.png" alt="" class="logo-company rounded-circle" />
+                      <img src="src/assets/img/company_01.png" alt="" class="logo-company rounded-circle" />
                       <p class="mb-0 fw-semibold">Website UI Kit</p>
-                      <div class="d-flex justify-content-center gap-2">
-                        <span class="badge rounded-circle text-bg-secondary">A</span>
-                        <span class="badge rounded-circle text-bg-secondary">B</span>
-                        <span class="badge rounded-circle text-bg-secondary">C</span>
+
+                      <div class="avatar-stack" aria-label="Team members">
+                        <img src="src/assets/img/person_01.jpg" alt="Team member 1" class="avatar-stack__img" />
+                        <img src="src/assets/img/person_02.jpg" alt="Team member 2" class="avatar-stack__img" />
+                        <img src="src/assets/img/person_03.jpg" alt="Team member 3" class="avatar-stack__img" />
                       </div>
+
                       <div class="d-flex justify-content-center gap-4">
-                        <i class="bi bi-paperclip text-muted fw-semibold"></i>
-                        <i class="bi bi-eye-fill text-muted fw-semibold"></i>
-                        <i class="bi bi-heart-fill text-muted fw-semibold"></i>
+                        <i class="bi bi-paperclip text-muted fw-semibold" aria-hidden="true"></i>
+                        <i class="bi bi-eye-fill text-muted fw-semibold" aria-hidden="true"></i>
+                        <i class="bi bi-heart-fill text-muted fw-semibold" aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
@@ -257,13 +246,17 @@
           </div>
           <div class="col-12 col-lg-6 d-flex flex-column gap-3">
             <span class="badge bg-brand-blue rounded-pill align-self-start badge-app text-white">Technology</span>
-            <h2 class="mb-0">We use the latest<br> technologies on the market</h2>
+            <h2 class="mb-0">
+              We use the latest
+              <span class="d-none d-sm-inline"><br></span>
+              technologies on the market
+            </h2>
             <p class="mb-0 lh-lg text-muted">
-              Get components and examples, including tons of<br />
+              Get components and examples, including tons of
+              <span class="d-none d-sm-inline"><br></span>
               variables that will help you grow your business.
             </p>
-            <a class="text-brand-blue fs-p-md fw-semibold text-decoration-underline align-self-start"
-              href="#case-studies">
+            <a class="text-brand-blue fs-p-md fw-semibold link-underline-strong align-self-start" href="#case-studies">
               See case studies
             </a>
           </div>
@@ -273,28 +266,24 @@
             <span class="badge bg-brand-yellow rounded-pill align-self-start badge-app text-white">
               Easy to install
             </span>
-
-            <h2 class="mb-0">Download, install and run.</h4>
-
-              <p class="mb-0 lh-lg text-muted">
-                Get components and examples, including tons of variables<br>
-                that will help you grow your business.
-              </p>
-
-              <div class="store-badges d-flex gap-3 flex-wrap">
-                <a class="store-badge" aria-label="Download on the App Store">
-                  <img class="store-badge__img" src="/src/assets/img/AppleStore.svg" alt="Download on the App Store" />
-                </a>
-
-                <a class="store-badge" aria-label="Get it on Google Play">
-                  <img class="store-badge__img" src="/src/assets/img/GooglePlay.png" alt="Get it on Google Play" />
-                </a>
-              </div>
+            <h2 class="mb-0">Download, install and run.</h2>
+            <p class="mb-0 lh-lg text-muted">
+              Get components and examples, including tons of variables
+              <span class="d-none d-sm-inline"><br></span>
+              that will help you grow your business.
+            </p>
+            <div class="store-badges d-flex gap-3 flex-wrap">
+              <a class="store-badge" href="#appstore" aria-label="Download on the App Store">
+                <img class="store-badge__img" src="src/assets/img/AppleStore.svg" alt="Download on the App Store" />
+              </a>
+              <a class="store-badge" href="#googleplay" aria-label="Get it on Google Play">
+                <img class="store-badge__img" src="src/assets/img/GooglePlay.png" alt="Get it on Google Play" />
+              </a>
+            </div>
           </div>
-
           <div class="col-12 col-lg-6">
             <div class="position-relative">
-              <img src="/src/assets/img/img_03.jpg" alt="" class="img-fluid rounded-3" />
+              <img src="src/assets/img/img_03.jpg" alt="" class="img-fluid rounded-3" />
 
               <a class="btn btn-light btn-play text-dark position-absolute top-0 start-0 m-3 z-3" href="#video">
                 Play video <i class="bi bi-play" aria-hidden="true"></i>
@@ -302,37 +291,42 @@
             </div>
           </div>
         </article>
-        <article>
-          <div class="col-12 col-lg-6 bg-brand-dark-blue product-panel text-white w-auto">
-            <div class="d-flex justify-content-between align-items-center p-5">
-              <div class="col-12 col-lg-8 d-flex flex-column gap-3">
+        <article class="product-cta">
+          <div class="bg-brand-dark-blue product-panel text-white">
+            <div
+              class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center gap-4 p-4 p-lg-5">
+              <div class="d-flex flex-column gap-2">
                 <h3 class="mb-0 fw-semibold">Infinite solutions</h3>
-                <p>Intuitive markup, powerful and lightning-fast build tools,<br> everything you need to turn your ideas
-                  into incredible products</p>
+                <p class="mb-0">
+                  Intuitive markup, powerful and lightning-fast build tools,
+                  <span class="d-none d-sm-inline"><br></span>
+                  everything you need to turn your ideas into incredible products
+                </p>
               </div>
+
               <a class="btn btn-light btn-play" href="#getStarted">Learn more</a>
             </div>
           </div>
         </article>
       </div>
     </section>
-    <!-- Awards -->
-    <section id="awards" class="bg-brand-gray pt-5">
+
+    <!-- AWARDS -->
+    <section id="awards" class="bg-brand-gray pt-5 pb-7">
       <div class="container px-4 px-lg-5 vstack gap-6">
         <div class="d-flex flex-column gap-3">
           <span class="badge bg-brand-blue rounded-pill align-self-start badge-app text-white">Awards</span>
           <p class="mb-0 fw-semibold">Awards for design, creativity, and innovation on the Internet.</p>
         </div>
       </div>
-
-      <div class="container-fluid px-0">
+      <div class="container-fluid mt-6 mb-2">
         <div class="awards-viewport">
-          <div class="awards-track d-flex flex-nowrap gap-5">
-            <div class="awards-card">
+          <div class="awards-track d-flex flex-nowrap gap-4 gap-lg-5" role="list">
+            <div class="awards-card" role="listitem">
               <a class="card award-card shadow-sm border-0 text-decoration-none" href="#award-1">
                 <div
                   class="card-body d-flex flex-column justify-content-center align-items-center text-center gap-3 py-4">
-                  <img src="/src/assets/icons/airbnb.svg" alt="Airbnb" class="logo-award" />
+                  <img src="src/assets/icons/airbnb.svg" alt="Airbnb" class="logo-award" />
                   <div class="rating" style="--rating:4.95" aria-label="4.95 out of 5 stars"></div>
                   <div>
                     <p class="mb-1 fw-semibold">4.95 out of 5 stars</p>
@@ -341,38 +335,35 @@
                 </div>
               </a>
             </div>
-
-            <div class="awards-card">
+            <div class="awards-card" role="listitem">
               <a class="card award-card shadow-sm border-0 text-decoration-none" href="#award-2">
                 <div
                   class="card-body d-flex flex-column justify-content-center align-items-center text-center gap-3 py-4">
-                  <img src="/src/assets/icons/amazon.svg" alt="Amazon" class="logo-award" />
+                  <img src="src/assets/icons/amazon.svg" alt="Amazon" class="logo-award" />
                   <div class="d-flex flex-column gap-2">
                     <p class="mb-0 text-muted small">They build modern-looking websites easily using Tabs.</p>
-                    <span class="award-cta">Learn more</span>
+                    <span class="award-cta link-underline-strong">Learn more</span>
                   </div>
                 </div>
               </a>
             </div>
-
-            <div class="awards-card">
+            <div class="awards-card" role="listitem">
               <a class="card award-card shadow-sm border-0 text-decoration-none" href="#award-3">
                 <div
                   class="card-body d-flex flex-column justify-content-center align-items-center text-center gap-3 py-4">
-                  <img src="/src/assets/icons/slack.svg" alt="Slack" class="logo-award" />
+                  <img src="src/assets/icons/slack.svg" alt="Slack" class="logo-award" />
                   <div class="d-flex flex-column gap-2">
                     <p class="mb-0 text-muted small">They build modern-looking websites easily using Tabs.</p>
-                    <span class="award-cta">Learn more</span>
+                    <span class="award-cta link-underline-strong">Learn more</span>
                   </div>
                 </div>
               </a>
             </div>
-
-            <div class="awards-card">
+            <div class="awards-card" role="listitem">
               <a class="card award-card shadow-sm border-0 text-decoration-none" href="#award-4">
                 <div
                   class="card-body d-flex flex-column justify-content-center align-items-center text-center gap-3 py-4">
-                  <img src="/src/assets/icons/spotify.svg" alt="Spotify" class="logo-award" />
+                  <img src="src/assets/icons/spotify.svg" alt="Spotify" class="logo-award" />
                   <div class="rating" style="--rating:4.70" aria-label="4.7 out of 5 stars"></div>
                   <div>
                     <p class="mb-1 fw-semibold">4.7 out of 5 stars</p>
@@ -381,23 +372,249 @@
                 </div>
               </a>
             </div>
-
-            <div class="awards-card">
+            <div class="awards-card" role="listitem">
               <a class="card award-card shadow-sm border-0 text-decoration-none" href="#award-5">
                 <div
                   class="card-body d-flex flex-column justify-content-center align-items-center text-center gap-3 py-4">
-                  <img src="/src/assets/icons/paypal.svg" alt="PayPal" class="logo-award" />
+                  <img src="src/assets/icons/paypal.svg" alt="PayPal" class="logo-award" />
                   <div class="d-flex flex-column gap-2">
                     <p class="mb-0 text-muted small">They build modern-looking websites easily using Tabs.</p>
-                    <span class="award-cta">Learn more</span>
+                    <span class="award-cta link-underline-strong">Learn more</span>
                   </div>
                 </div>
               </a>
             </div>
           </div>
         </div>
-
+      </div>
     </section>
+    <!-- FAQ -->
+    <section id="faq" class="pt-4 pb-5">
+      <div class="container px-4 px-lg-5 vstack gap-6">
+        <div class="text-center vstack gap-3 mb-4">
+          <h2 class="mb-0">Helpful answers</h2>
+          <p class="mb-0 text-muted fw-semibold">
+            Start building fast, beautiful, and modern-looking websites in no time.
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="accordion accordion-app" id="faqCol1">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq1-h">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                    <span class="accordion-lead d-inline-flex align-items-center">
+                      <span class="accordion-icon me-2" aria-hidden="true">
+                        <i class="bi bi-file-earmark"></i>
+                      </span>
+                      <span class="accordion-lead__text fw-semibold">Which license do I need?</span>
+                    </span>
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faq1-h" data-bs-parent="#faqCol1">
+                  <div class="accordion-body">
+                    Everything you need to start quickly: layout blocks, components, and tokens ready to customize.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq2-h">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    <span class="accordion-lead d-inline-flex align-items-center">
+                      <span class="accordion-icon me-2" aria-hidden="true">
+                        <i class="bi bi-lock"></i>
+                      </span>
+                      <span class="accordion-lead__text fw-semibold">How do I get access to my database?</span>
+                    </span>
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-h" data-bs-parent="#faqCol1">
+                  <div class="accordion-body">
+                    Update tokens and component styles in Sass, then rebuild your CSS bundle.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq3-h">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    <span class="accordion-lead d-inline-flex align-items-center">
+                      <span class="accordion-icon me-2" aria-hidden="true">
+                        <i class="bi bi-folder"></i>
+                      </span>
+                      <span class="accordion-lead__text fw-semibold">How do I see previous orders?</span>
+                    </span>
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-h" data-bs-parent="#faqCol1">
+                  <div class="accordion-body">
+                    Yes—keep markup simple, reuse utilities, and avoid heavy JS where it’s not needed.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="accordion accordion-app" id="faqCol2">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq4-h">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    <span class="accordion-lead d-inline-flex align-items-center">
+                      <span class="accordion-icon me-2" aria-hidden="true">
+                        <i class="bi bi-file-earmark"></i>
+                      </span>
+                      <span class="accordion-lead__text fw-semibold">Which license do I need?</span>
+                    </span>
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-h" data-bs-parent="#faqCol2">
+                  <div class="accordion-body">
+                    Everything you need to start quickly: layout blocks, components, and tokens ready to customize.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq5-h">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                    <span class="accordion-lead d-inline-flex align-items-center">
+                      <span class="accordion-icon me-2" aria-hidden="true">
+                        <i class="bi bi-lock"></i>
+                      </span>
+                      <span class="accordion-lead__text fw-semibold">How do I get access to my database?</span>
+                    </span>
+                  </button>
+                </h3>
+                <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq5-h" data-bs-parent="#faqCol2">
+                  <div class="accordion-body">
+                    Update tokens and component styles in Sass, then rebuild your CSS bundle.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq6-h">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                    <span class="accordion-lead d-inline-flex align-items-center">
+                      <span class="accordion-icon me-2" aria-hidden="true">
+                        <i class="bi bi-folder"></i>
+                      </span>
+                      <span class="accordion-lead__text fw-semibold">How do I see previous orders?</span>
+                    </span>
+                  </button>
+                </h3>
+                <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq6-h" data-bs-parent="#faqCol2">
+                  <div class="accordion-body">
+                    Yes—keep markup simple, reuse utilities, and avoid heavy JS where it’s not needed.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center vstack gap-3 mt-4">
+          <h5 class="mb-0">I want to start a new project.</h5>
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+            <a class="btn btn-now" href="#buynow">
+              Buy Now <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn-app" href="#learnmore">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="contact" class="footer bg-brand-dark-blue text-white pt-5 pb-4">
+      <div class="container px-4 px-lg-5">
+        <div class="row gy-3 align-items-center justify-content-between">
+          <div class="col-12 col-lg-6 vstack gap-2">
+            <h4 class="mb-0 text-white">Brilliant solutions for your ideas</h4>
+            <p class="mb-0 text-white-50">Modern-looking websites</p>
+          </div>
+          <div class="col-12 col-lg-auto">
+            <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 justify-content-lg-end">
+              <a class="btn btn-light btn-play text-dark" href="#docs">
+                <i class="bi bi-book me-2 text-brand-blue" aria-hidden="true"></i>
+                Documentation
+              </a>
+              <a class="btn btn-now" href="#purchase">Purchase Now</a>
+            </div>
+          </div>
+        </div>
+        <hr class="footer__hr my-4">
+        <div class="row gy-4 align-items-start gx-lg-5">
+          <div class="col-12 col-lg-4 pe-lg-4">
+            <div class="vstack gap-3 align-items-start text-start">
+              <img src="src/assets/icons/odoo-white.svg" alt="Odoo Logo" class="icon-logo-white d-block" />
+              <p class="mb-0 text-white-50 fs-p-md">
+                Odoo attempts to bring the best development experience to designers and developers by offering the tools
+                needed for having a quick and solid start in most web projects.
+              </p>
+              <div class="d-flex gap-4">
+                <a class="text-white-50 footer__social" href="#twitter" aria-label="Twitter">
+                  <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                </a>
+                <a class="text-white-50 footer__social" href="#github" aria-label="GitHub">
+                  <i class="bi bi-github" aria-hidden="true"></i>
+                </a>
+                <a class="text-white-50 footer__social" href="#linkedin" aria-label="LinkedIn">
+                  <i class="bi bi-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-8 ps-lg-4">
+            <nav aria-label="Footer">
+              <div class="row row-cols-2 row-cols-md-3 g-4">
+                <div class="col">
+                  <p class="mb-2 fw-semibold">Account</p>
+                  <ul class="list-unstyled m-0 vstack gap-2">
+                    <li><a class="footer__link" href="#features">Profile</a></li>
+                    <li><a class="footer__link" href="#pricing">Settings</a></li>
+                    <li><a class="footer__link" href="#billing">Billing</a></li>
+                    <li><a class="footer__link" href="#notifications">Notifications</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <p class="mb-2 fw-semibold">About</p>
+                  <ul class="list-unstyled m-0 vstack gap-2">
+                    <li><a class="footer__link" href="#services">Services</a></li>
+                    <li><a class="footer__link" href="#pricing">Pricing</a></li>
+                    <li><a class="footer__link" href="#contact">Contact</a></li>
+                    <li><a class="footer__link" href="#careers">Careers</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <p class="mb-2 fw-semibold">Company</p>
+                  <ul class="list-unstyled m-0 vstack gap-2">
+                    <li><a class="footer__link" href="#community">Community</a></li>
+                    <li><a class="footer__link" href="#help">Help Center</a></li>
+                    <li><a class="footer__link" href="#support">Support</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <hr class="footer__hr my-4">
+        <div class="row gy-2 align-items-center">
+          <div class="col-12 col-lg">
+            <small class="text-white-50">© Odoo. All rights reserved</small>
+          </div>
+          <div class="col-12 col-lg-auto">
+            <div class="d-flex flex-wrap gap-3 justify-content-lg-end">
+              <a class="footer__link" href="#terms">Terms</a>
+              <a class="footer__link" href="#privacy">Privacy</a>
+              <a class="footer__link" href="#cookies">Cookies</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </main>
 </body>
 

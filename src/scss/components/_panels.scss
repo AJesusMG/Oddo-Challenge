@@ -1,0 +1,21 @@
+.hero-panel {
+  display: flex;
+  flex-direction: column;
+  gap: $hero-panel-gap;
+  border-radius: $hero-panel-radius $hero-panel-radius $hero-panel-radius-br $hero-panel-radius;
+  padding: $hero-panel-p;
+  max-width: $hero-panel-max-w;
+  background: #fff;
+}
+
+.product-panel {
+  display: flex;
+  flex-direction: column;
+  gap: $product-panel-gap;
+  border-radius: $product-panel-radius $product-panel-radius-br $product-panel-radius $product-panel-radius-br;
+  padding: $product-panel-p;
+}
+
+@media (max-width: 991.98px) {
+  .hero-panel { margin-inline: auto; }
+}

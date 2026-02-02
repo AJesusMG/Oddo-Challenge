@@ -1,0 +1,33 @@
+$brand-blue: #038AFF;
+$brand-yellow: #ffc107;
+$brand-green: #10b981;
+$brand-red: #ff0000;
+$brand-dark-blue: #161348;
+$brand-gray: #FAFBFF;
+
+$custom-colors: (
+  "brand": $brand-blue,
+  "brand-blue": $brand-blue,
+  "brand-yellow": $brand-yellow,
+  "brand-green": $brand-green,
+  "brand-red": $brand-red,
+  "brand-dark-blue": $brand-dark-blue,
+  "brand-gray": $brand-gray,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$navbar-padding-y: 0.85rem;
+
+$spacers: map-merge(
+  $spacers,
+  (
+    6: 2.5rem,
+    7: 10rem,
+    8: 12rem,
+    9: 14rem,
+    10: 16rem,
+    11: 18rem,
+    12: 20rem
+  )
+);

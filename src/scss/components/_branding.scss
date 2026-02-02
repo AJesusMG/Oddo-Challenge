@@ -1,0 +1,40 @@
+.brand-logo {
+  height: $brand-logo-h;
+  width: auto;
+  display: block;
+}
+
+.icon-logo-white {
+  height: $icon-logo-white-h;
+  width: auto;
+  display: block;
+}
+
+.logo-airbnb {
+  height: $feature-logo-airbnb-h;
+  width: auto;
+}
+
+.logo-award {
+  height: $feature-logo-award-h;
+  width: auto;
+}
+
+.logo-company {
+  height: $feature-logo-company-sz;
+  width: $feature-logo-company-sz;
+}
+
+.trusted-logos .icon-logo-white {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 575.98px) {
+  .trusted-logos {
+    gap: .75rem;
+  }
+
+  .trusted-logos .icon-logo-white {
+    height: 22px; /* un poco más chico en mobile */
+  }
+}

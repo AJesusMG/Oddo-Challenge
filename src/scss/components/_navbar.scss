@@ -1,0 +1,39 @@
+@media (min-width: 992px) {
+  .navbar .nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .app-signin {
+    display: inline-flex;
+    justify-content: center;
+    padding: .6rem 1rem;
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: .5rem;
+    text-decoration: none;
+  }
+
+  .app-signin:hover,
+  .app-signin:focus-visible {
+    border-color: rgba(255, 255, 255, .6);
+    background: rgba(255, 255, 255, .08);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .app-signin { width: 100%; }
+  .navbar .btn-app { width: 100%; justify-content: center; }
+}
+
+.navbar .navbar-nav { gap: 1rem; }
+.navbar .navbar-nav .nav-link { padding-inline: .75rem; }
+
+.navbar.bg-brand {
+  --bs-navbar-color: #fff;
+  --bs-navbar-hover-color: #fff;
+  --bs-navbar-active-color: #fff;
+  --bs-navbar-toggler-border-color: rgba(255, 255, 255, .35);
+}
